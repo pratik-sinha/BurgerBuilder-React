@@ -50,13 +50,18 @@ class BurgerBuilder extends Component {
              disabledInfo[key] = disabledInfo[key] <= 0;
          }
          return (
+<<<<<<< HEAD
              <React.Fragment>
+=======
+             <Aux>
+>>>>>>> 5aa2ab2fc6342d03f67dccfa9e477258207dd60a
                  <Modal modalClosed={this.purchaseCancelHandler} show={this.state.purchasing}> 
                  {!this.props.ings? <Spinner/>:
                  <OrderSummary price={this.props.price} purchaseCancelled={this.purchaseCancelHandler} purchaseContinued={this.purchaseContinueHandler} ingredients={this.props.ings} />
                  }
                  </Modal>
                  {this.props.ings ? 
+<<<<<<< HEAD
                  <div>
                  <Burger ingredients={this.props.ings} />
                  <BuildControls isAuth={this.props.isAuth} ordered={this.purchaseHandler} purchasable={this.updatePurchaseState(this.props.ings)} price={this.props.price} disabled={disabledInfo} ingredientAdded ={this.props.onIngredientAdded} ingredientRemoved={this.props.onIngredientRemoved} />
@@ -64,6 +69,15 @@ class BurgerBuilder extends Component {
                  : <Spinner />
                  }
             </React.Fragment>
+=======
+                 <Aux>
+                 <Burger ingredients={this.props.ings} />
+                 <BuildControls isAuth={this.props.isAuth} ordered={this.purchaseHandler} purchasable={this.updatePurchaseState(this.props.ings)} price={this.props.price} disabled={disabledInfo} ingredientAdded ={this.props.onIngredientAdded} ingredientRemoved={this.props.onIngredientRemoved} />
+                 </Aux>
+                 : <Spinner />
+                 }
+            </Aux>
+>>>>>>> 5aa2ab2fc6342d03f67dccfa9e477258207dd60a
          );
      }
 }

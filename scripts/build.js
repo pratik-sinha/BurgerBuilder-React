@@ -170,10 +170,9 @@ function build(previousFileSizes) {
             '\nTreating warnings as errors because process.env.CI = true.\n' +
               'Most CI servers set it automatically.\n'
           )
-        );
+        );s
         return reject(new Error(messages.warnings.join('\n\n')));
       }
-
       return resolve({
         stats,
         previousFileSizes,
